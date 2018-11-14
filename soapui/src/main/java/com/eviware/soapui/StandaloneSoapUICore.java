@@ -65,11 +65,12 @@ public class StandaloneSoapUICore extends SwingSoapUICore {
     public void initSoapUILookAndFeel() {
         try {
             // Enabling native look & feel by default on Mac OS X
-            if (UISupport.isMac()) {
+            /* if (UISupport.isMac()) {
                 javax.swing.UIManager.setLookAndFeel(UIManager.getSystemLookAndFeelClassName());
                 getSettings().setBoolean(UISettings.NATIVE_LAF, true);
                 log.info("Defaulting to native L&F for Mac OS X");
-            } else if (getSettings().getBoolean(UISettings.NATIVE_LAF)) {
+            } else */ 
+            if (getSettings().getBoolean(UISettings.NATIVE_LAF)) {
                 javax.swing.UIManager.setLookAndFeel(UIManager.getSystemLookAndFeelClassName());
             } else {
                 SoapUITheme theme = new SoapUITheme();
